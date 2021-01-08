@@ -33,7 +33,7 @@
           active-class="white--text"
         >
           <v-list-item>
-            <v-list-item-title class="active">Home</v-list-item-title>
+            <router-link to="/userHome"><v-list-item-title class="active"><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
           </v-list-item>
 
           <v-list-item>
@@ -49,25 +49,33 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-card-text>
-      <section class="ui two column centered grid">
-    <div class="column">
-      <form class="ui segment large form">
-          <div class="field">
-            <div class="ui right icon input large">
+    <v-card-text class="location">
+    
+    <div class=" center">
+      <form >
+          <div class="row">
+            <div class="d-inline pa-2 white rounded accent-4 column">
               <input
                 type="text"
                 placeholder="Enter your address"
-                v-model="address"
+               
                 ref="autocomplete"
                 color="white"
               />
-              <i class="dot circle link icon" @click="locatorButtonPressed"></i>
             </div>
-        </div>
+            <div class="column">
+              <v-btn 
+              icon
+              tile
+              outlined
+              x-large 
+              @click="locatorButtonPressed"><v-icon>mdi-compass</v-icon></v-btn>
+            </div>
+          </div>
       </form>
     </div>
-  </section>
+    
+
       <br>
       <br>
       <br>
@@ -83,7 +91,7 @@
     </v-card-text>
     <v-card-text>
       <h1>Cuisines</h1>
-      
+
       <br>
       <br>
       <br>
@@ -132,5 +140,8 @@ export default {
 <style>
 body {
   background: black;
+}
+.location {
+    background-image: url('../assets/food.jpg')
 }
 </style>
