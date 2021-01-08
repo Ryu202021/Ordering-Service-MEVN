@@ -8,7 +8,7 @@
     </v-row>
     <v-row class="text-center">
       <v-col>
-        
+        <router-link to="/userHome" tag="v-btn">
         <v-btn
         color="error"
         elevation="4"
@@ -16,7 +16,7 @@
         text
         dark
         outlined
-        >User</v-btn>
+        >User</v-btn></router-link>
       </v-col>
       <v-col>
         <v-btn
@@ -41,7 +41,10 @@
 
 <script>
 /* eslint-disable */
-export default {};
+export default {
+  name: 'app',
+
+};
 </script>
 <style>
 body {
