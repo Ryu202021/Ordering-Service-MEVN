@@ -1,9 +1,6 @@
 <template>
   <v-app>
-    
-
     <v-main>
-
       <Login />
     </v-main>
   </v-app>
@@ -20,7 +17,7 @@ export default {
   },
 
   data: () => ({
-    //
+    
   }),
 };
 </script>
