@@ -2,7 +2,7 @@
 
 <v-container>
     <UserNav />
-    <v-card-text class="location">
+    <v-card-text class="">
     
     <div class=" center">
       <form >
@@ -22,7 +22,7 @@
               tile
               outlined
               x-large 
-              @click="locatorButtonPressed"><v-icon>mdi-compass</v-icon></v-btn>
+              ><v-icon>mdi-compass</v-icon></v-btn>
             </div>
           </div>
       </form>
@@ -58,6 +58,7 @@
 
       
     </v-card-text>
+ 
 </v-container>
 </template>
 
@@ -69,19 +70,6 @@ export default {
   name: "Home",
   components: {
     UserNav
-  },
-      methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
-}
-    }
-
+  }
 };
 </script>

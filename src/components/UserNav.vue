@@ -33,11 +33,11 @@
           active-class="white--text"
         >
           <v-list-item>
-            <router-link to="/userHome"><v-list-item-title class="active"><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
+            <router-link to="/userHome"><v-list-item-title><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>My Orders</v-list-item-title>
+            <router-link to="/userOrders"><v-list-item-title><v-icon>mdi-cart></v-icon> Orders</v-list-item-title></router-link>
           </v-list-item>
 
           <v-list-item>
@@ -49,63 +49,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-card-text class="location">
-    
-    <div class=" center">
-      <form >
-          <div class="row">
-            <div class="d-inline pa-2 white rounded accent-4 column">
-              <input
-                type="text"
-                placeholder="Enter your address"
-               
-                ref="autocomplete"
-                color="white"
-              />
-            </div>
-            <div class="column">
-              <v-btn 
-              icon
-              tile
-              outlined
-              x-large 
-              @click="locatorButtonPressed"><v-icon>mdi-compass</v-icon></v-btn>
-            </div>
-          </div>
-      </form>
-    </div>
-    
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-      
-    </v-card-text>
-    <v-card-text>
-      <h1>Cuisines</h1>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
-      
-    </v-card-text>
-  </v-card>
+    </v-card>
 </template>
 
 <script>
@@ -123,18 +67,6 @@ export default {
         this.drawer = false
       },
     },
-    methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
-}
-    }
 };
 </script>
 <style>
