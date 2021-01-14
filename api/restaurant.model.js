@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Define collection and schema for Post
+// Define collection and schema for Restaurant
 let Restaurant = new Schema({
   title: {
     type: String
