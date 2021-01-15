@@ -5,14 +5,20 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for Post
 let Order = new Schema({
-  title: {
-    type: String
+  Date: {
+    type: Date
   },
-  body: {
-    type: String
-  }
-},{
-    collection: 'Orders'
+  Price: {
+    type: Number
+  },
+  Items: [
+    { 
+      name: { type: String }, 
+      price: { type: Number } 
+    }
+  ],
+
+  collection: 'Orders'
 });
 
 module.exports = mongoose.model('Order', Order);

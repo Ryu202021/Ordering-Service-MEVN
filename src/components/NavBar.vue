@@ -3,8 +3,11 @@
       <v-navigation-drawer
       v-model="drawer"
       absolute
-        bottom
-      temporary
+    temporary
+    bottom
+      
+      height="500px"
+
     >
       <v-list
         nav
