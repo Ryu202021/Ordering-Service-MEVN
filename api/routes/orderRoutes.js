@@ -4,7 +4,7 @@ const express = require('express');
 const orderRoutes = express.Router();
 
 // Require Post model in our routes module
-let Order = require('./order.model');
+let Order = require('../models/order');
 
 // Defined store route
 orderRoutes.route('/add').post(function (req, res) {

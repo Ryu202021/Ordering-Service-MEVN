@@ -4,7 +4,7 @@ const express = require('express');
 const restaurantRoutes = express.Router();
 
 // Require Post model in our routes module
-let Restaurant = require('./restaurant.model');
+let Restaurant = require('../models/restaurant');
 
 // Defined store route
 restaurantRoutes.route('/add').post(function (req, res) {
