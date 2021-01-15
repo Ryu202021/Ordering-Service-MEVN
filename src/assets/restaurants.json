@@ -1,0 +1,15 @@
+{
+    "name" : "McDonald's",
+    "menu" : {
+        "breakfast" : [
+            {
+                "name" : "Hash Brown",
+                "image" : null,
+                "price" : 5.00
+            },
+            {
+
+            }
+        ]
+    }
+}
