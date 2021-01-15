@@ -59,7 +59,7 @@ import UserNav from "@/components/UserNav.vue";
 export default {
   data() {
     return {
-      orders: []
+      
     }
   },
   name: "Home",
