@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for Restaurant
 let Restaurant = new Schema({
-  title: {
+  name: {
     type: String
   },
-  body: {
-    type: String
+  menu: {
+    type: Array
   }
 },{
     collection: 'restaurants'

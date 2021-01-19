@@ -4,6 +4,8 @@ import UserHome from "../views/UserHome.vue";
 import Login from "../components/Login.vue";
 import UserOrders from "../views/UserOrders.vue";
 import UserDiscover from "../views/UserDiscover.vue";
+import AdminHome from "../views/AdminHome.vue";
+import AdminUsers from "../views/AdminUsers.vue";
 
 Vue.use(VueRouter);
 
@@ -28,7 +30,11 @@ const routes = [
     name:"UserDiscover",
     component: UserDiscover
   },
-  
+  {
+    path:"/adminUsers",
+    name:"AdminUsers",
+    component: AdminUsers
+  },
   {
     path: "/about",
     name: "About",
@@ -37,6 +43,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
+  },
+  {
+    path: "/adminHome",
+    name: "AdminHome",
+    component: AdminHome
   }
 ];
 
