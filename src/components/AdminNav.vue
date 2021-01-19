@@ -55,7 +55,7 @@
 <script>
 
 /* eslint-disable */
-import NavBar from "./AdminNavBar.vue"
+import NavBar from "./navbars/AdminNavBar.vue"
 export default {
  components: {NavBar},
     data: () => ({

@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import NavBar from './NavBar.vue';
+import NavBar from './navbars/UserNavBar.vue';
 /* eslint-disable */
 export default {
   components: { NavBar },
