@@ -22,19 +22,13 @@
               tile
               outlined
               x-large 
-              @click="locatorButtonPressed"><v-icon>mdi-compass</v-icon></v-btn>
+              @click="locatorButtonPressed"><v-icon>mdi-crosshairs-gps</v-icon></v-btn>
             </div>
           </div>
       </form>
     </div>
     
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
       <br>
       <br>
       <br>
@@ -105,25 +99,27 @@ export default {
     cuisines: [
       {
         name: "Fast Food",
-        image: "../assets/logo.svg",
+        image: "../assets/fastFood.jpg",
+      },
+      {
+        name: "Chinese",
+        image: "../assets/chinese.jpg",
+      },
+      {
+        name: "Indian",
+        image: "../assets/indian.jpg"
+      },
+      {
+        name: "Noodles",
+        image: "../assets/noodles.jpg"
       }
+
     ]
   }),
   components: {
     UserNav
   },
-      methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
-}
-    }
+      
 
 };
 </script>

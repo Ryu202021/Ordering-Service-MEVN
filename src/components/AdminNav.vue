@@ -41,7 +41,7 @@
           </v-list-item></router-link>
 
           <router-link to="/" tag="v-list-item"><v-list-item>
-            <v-list-item-title><v-icon>mdi-cart></v-icon> Logout</v-list-item-title>
+            <v-list-item-title><v-icon>mdi-logout</v-icon> Logout</v-list-item-title>
           </v-list-item></router-link>
 
         
