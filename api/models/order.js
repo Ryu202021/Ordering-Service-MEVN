@@ -12,7 +12,7 @@ let Order = new Schema({
     type: Number
   },
 }, {
-  collection: 'Orders'
+  collection: 'orders'
 }
 );
 
