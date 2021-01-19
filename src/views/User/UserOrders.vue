@@ -65,6 +65,7 @@ export default {
   name: "Home",
   components: {
     UserNav
-  }
+  },
+  
 };
 </script>

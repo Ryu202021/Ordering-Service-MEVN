@@ -53,8 +53,8 @@
       show-arrows
     >
       <v-slide-item
-        v-for="n in 15"
-        :key="n"
+        v-for="item in cuisines"
+        :key="item"
         v-slot="{ active, toggle }"
       >
         <v-card
@@ -95,7 +95,7 @@ import UserNav from "@/components/UserNav.vue";
 export default {
   name: "Home",
   data: () => ({
-    model: null,
+    
     cuisines: [
       {
         name: "Fast Food",
@@ -119,6 +119,18 @@ export default {
   components: {
     UserNav
   },
+   methods: {
+        locatorButtonPressed() {
+        navigator.geolocation.getCurrentPosition(position => {
+       console.log(position.coords.latitude);
+       console.log(position.coords.longitude);
+     },
+     error => {
+       console.log(error.message);
+     },
+  )   
+}
+    }
       
 
 };
