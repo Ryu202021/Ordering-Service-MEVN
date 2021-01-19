@@ -27,12 +27,12 @@
 >Delivery</v-btn>
       </v-col>
       <v-col>
-        <v-btn
+        <router-link to="/adminHome" tag="v-btn"> <v-btn
         color="error"
         elevation="4"
         large
         text
->Admin</v-btn>
+>Admin</v-btn></router-link>
       </v-col>
     </v-row>
 

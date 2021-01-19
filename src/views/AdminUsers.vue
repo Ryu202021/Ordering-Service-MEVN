@@ -11,7 +11,10 @@
             Name
           </th>
           <th class="text-left">
-            Calories
+            Edit
+          </th>
+          <th class="text-left">
+              Delete
           </th>
         </tr>
       </thead>
@@ -22,6 +25,7 @@
         >
           <td>{{ item.name }}</td>
           <td>{{ item.calories }}</td>
+          <td><v-btn>Delete</v-btn></td>
         </tr>
       </tbody>
     </template>
@@ -87,18 +91,8 @@ export default {
   components: {
     AdminNav
   },
-      methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
+    
 }
-    }
+    
 
-};
 </script>
