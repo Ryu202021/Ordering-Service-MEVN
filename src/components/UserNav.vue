@@ -35,19 +35,19 @@
           v-model="group"
           active-class="white--text"
         >
-          <v-list-item>
-            <router-link to="/userHome"><v-list-item-title><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
-          </v-list-item>
-
-          <router-link to="/userOrders"><v-list-item>
-            <v-list-item-title><v-icon>mdi-cart></v-icon> Orders</v-list-item-title>
+           <router-link to="/userHome" tag="v-list-item"><v-list-item>
+           <v-icon>mdi-home</v-icon><v-list-item-title>Home</v-list-item-title>
           </v-list-item></router-link>
 
-         <router-link to="/userDiscover"> <v-list-item>
+          <router-link to="/userOrders" tag="v-list-item"><v-list-item>
+            <v-icon>mdi-cart></v-icon><v-list-item-title>Orders</v-list-item-title>
+          </v-list-item></router-link>
+
+         <router-link to="/userDiscover" tag="v-list-item"> <v-list-item>
             <v-list-item-title>Discover</v-list-item-title>
           </v-list-item></router-link>
-        <router-link to="/"><v-list-item>
-            <v-list-item-title><v-icon><mdi-logout></mdi-logout>></v-icon> Logout</v-list-item-title>
+        <router-link to="/" tag="v-list-item"><v-list-item>
+            <v-list-item-title><v-icon><mdi-logout></mdi-logout>></v-icon>Logout</v-list-item-title>
           </v-list-item></router-link>
         
         </v-list-item-group>
