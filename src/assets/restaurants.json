@@ -1,22 +1,70 @@
-{
-    "name" : "McDonald's",
-    "menu" : {
-        "breakfast" : [
-            {
-                "name" : "Hash Brown",
-                "image" : null,
-                "price" : 5.00
-            },
-            {
-
-            }
-        ],
-        "lunch" : [
-            {
-
-            }
-        ]
+[
+    {
+        "name": "McDonald's",
+        "menu": {
+            "breakfast": [
+                {
+                    "name": "Hash Brown",
+                    "image": null,
+                    "price": 5.00
+                },
+                {}
+            ],
+            "lunch": [
+                {}
+            ]
+        },
+        "logo": "./food.jpg"
     },
-    "logo" : "./food.jpg"
-
-}
+    {
+        "name": "McDonald's",
+        "menu": {
+            "breakfast": [
+                {
+                    "name": "Hash Brown",
+                    "image": null,
+                    "price": 5.00
+                },
+                {}
+            ],
+            "lunch": [
+                {}
+            ]
+        },
+        "logo": "./food.jpg"
+    },
+    {
+        "name": "McDonald's",
+        "menu": {
+            "breakfast": [
+                {
+                    "name": "Hash Brown",
+                    "image": null,
+                    "price": 5.00
+                },
+                {}
+            ],
+            "lunch": [
+                {}
+            ]
+        },
+        "logo": "./food.jpg"
+    },
+    {
+        "name": "Wendy's",
+        "menu": {
+            "breakfast": [
+                {
+                    "name": "Hash Brown",
+                    "image": null,
+                    "price": 5.00
+                },
+                {}
+            ],
+            "lunch": [
+                {}
+            ]
+        },
+        "logo": "./food.jpg"
+    }
+]

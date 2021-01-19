@@ -24,8 +24,8 @@
           :key="item.name"
         >
           <td>{{ item.name }}</td>
-          <td>{{ item.calories }}</td>
-          <td><v-btn>Delete</v-btn></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </template>

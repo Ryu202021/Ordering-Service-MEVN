@@ -13,6 +13,9 @@
           <th class="text-left">
             Edit
           </th>
+          <th class="text-left">
+              Delete
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +24,7 @@
           :key="restaurant.name"
         >
           <td>{{ restaurant.name }}</td>
-          <td>{{ restaurant.calories }}</td>
+          <td></td>
         </tr>
       </tbody>
     </template>
@@ -40,7 +43,7 @@ export default {
   name: "AdminHome",
   data() {
     return {
-        users: [
+        restaurants: [
           {
             name: 'Frozen Yogurt',
             calories: 159,
@@ -87,18 +90,6 @@ export default {
   components: {
     AdminNav
   },
-      methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
-}
-    }
 
 };
 </script>

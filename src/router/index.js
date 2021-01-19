@@ -6,6 +6,7 @@ import UserOrders from "../views/UserOrders.vue";
 import UserDiscover from "../views/UserDiscover.vue";
 import AdminHome from "../views/AdminHome.vue";
 import AdminUsers from "../views/AdminUsers.vue";
+import AdminRestaurants from "../views/AdminRestaurants";
 import AdminEditUsers from "../views/AdminEditUsers.vue";
 import AdminEditRestaurants from "../views/AdminEditRestaurants";
 
@@ -36,6 +37,11 @@ const routes = [
     path:"/adminUsers",
     name:"AdminUsers",
     component: AdminUsers
+  },
+  {
+    path:"/adminRestaurants",
+    name:"AdminRestaurants",
+    component: AdminRestaurants
   },
   {
     path:"/editRestaurants:id",

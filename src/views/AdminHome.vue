@@ -24,12 +24,12 @@
 >Employees</v-btn>
       </v-col>
       <v-col>
-        <v-btn
+        <router-link to="/adminRestaurants" tag="v-btn"><v-btn
         color="error"
         elevation="4"
         large
         text
->Restaurants</v-btn>
+>Restaurants</v-btn></router-link>
       </v-col>
     </v-row>
           
@@ -50,18 +50,7 @@ export default {
   components: {
     AdminNav
   },
-      methods: {
-        locatorButtonPressed() {
-        navigator.geolocation.getCurrentPosition(position => {
-       console.log(position.coords.latitude);
-       console.log(position.coords.longitude);
-     },
-     error => {
-       console.log(error.message);
-     },
-  )   
-}
-    }
+     
 
 };
 </script>
