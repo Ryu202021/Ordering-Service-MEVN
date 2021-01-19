@@ -11,14 +11,9 @@ let Order = new Schema({
   Price: {
     type: Number
   },
-  Items: [
-    { 
-      name: { type: String }, 
-      price: { type: Number } 
-    }
-  ],
-
+}, {
   collection: 'Orders'
-});
+}
+);
 
 module.exports = mongoose.model('Order', Order);
