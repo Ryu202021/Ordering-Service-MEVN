@@ -35,9 +35,10 @@
           v-model="group"
           active-class="white--text"
         >
+          <router-link to="/adminHome" tag="v-list-item">
           <v-list-item>
-            <router-link to="/adminHome"><v-list-item-title><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
-          </v-list-item>
+            <v-list-item-title><v-icon>mdi-home</v-icon>Home</v-list-item-title>
+          </v-list-item></router-link>
 
           <router-link to="/"><v-list-item>
             <v-list-item-title><v-icon>mdi-cart></v-icon> Logout</v-list-item-title>
@@ -55,9 +56,9 @@
 <script>
 
 /* eslint-disable */
-import NavBar from "./navbars/AdminNavBar.vue"
+
 export default {
- components: {NavBar},
+ components: {},
     data: () => ({
       drawer: false,
       group: null,

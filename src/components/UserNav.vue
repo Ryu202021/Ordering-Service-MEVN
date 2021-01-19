@@ -18,32 +18,62 @@
       </v-btn>
     </v-app-bar>
 
-    <NavBar />
+   <v-navigation-drawer
+      v-model="drawer"
+      absolute
+    temporary
+    bottom
+      
+      height="500px"
+
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="white--text"
+        >
+          <v-list-item>
+            <router-link to="/userHome"><v-list-item-title><v-icon>mdi-home</v-icon>Home</v-list-item-title></router-link>
+          </v-list-item>
+
+          <router-link to="/userOrders"><v-list-item>
+            <v-list-item-title><v-icon>mdi-cart></v-icon> Orders</v-list-item-title>
+          </v-list-item></router-link>
+
+         <router-link to="/userDiscover"> <v-list-item>
+            <v-list-item-title>Discover</v-list-item-title>
+          </v-list-item></router-link>
+        <router-link to="/"><v-list-item>
+            <v-list-item-title><v-icon><mdi-logout></mdi-logout>></v-icon> Logout</v-list-item-title>
+          </v-list-item></router-link>
+        
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
 
     </v-card>
 </template>
 
 <script>
-import NavBar from './navbars/UserNavBar.vue';
+
 /* eslint-disable */
 export default {
-  components: { NavBar },
+   components: {  },
     data: () => ({
-      
+       drawer: false,
+      group: null,
     }),
 
     watch: {
       group () {
         this.drawer = false
       },
-    },
+    }
 };
 </script>
 <style>
-body {
-  background: black;
-}
-.location {
-    background-image: url('../assets/food.jpg')
-}
+
 </style>

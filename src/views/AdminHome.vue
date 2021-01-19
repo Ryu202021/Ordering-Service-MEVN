@@ -43,7 +43,7 @@
 import AdminNav from "@/components/AdminNav.vue";
 
 export default {
-  name: "AdminHome",
+  
   data() {
       
   },
@@ -54,3 +54,4 @@ export default {
 
 };
 </script>
+

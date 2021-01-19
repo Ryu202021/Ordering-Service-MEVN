@@ -4,7 +4,7 @@
     <AdminNav />
     <v-card-text>
      <v-simple-table>
-    <template v-slot:default>
+    
       <thead>
         <tr>
           <th class="text-left">
@@ -25,9 +25,10 @@
         >
           <td>{{ restaurant.name }}</td>
           <td></td>
+        <td></td>
         </tr>
       </tbody>
-    </template>
+    
   </v-simple-table>
           
     </v-card-text>
@@ -40,7 +41,7 @@
 import AdminNav from "@/components/AdminNav.vue";
 
 export default {
-  name: "AdminHome",
+
   data() {
     return {
         restaurants: [
@@ -56,30 +57,8 @@ export default {
             name: 'Eclair',
             calories: 262,
           },
-          {
-            name: 'Cupcake',
-            calories: 305,
-          },
-          {
-            name: 'Gingerbread',
-            calories: 356,
-          },
-          {
-            name: 'Jelly bean',
-            calories: 375,
-          },
-          {
-            name: 'Lollipop',
-            calories: 392,
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-          },
+          
+          
           {
             name: 'KitKat',
             calories: 518,
@@ -89,7 +68,7 @@ export default {
   },
   components: {
     AdminNav
-  },
+  }
 
 };
 </script>
