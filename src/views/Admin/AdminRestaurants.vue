@@ -27,6 +27,11 @@
           <td></td>
         <td></td>
         </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><v-btn>+ Add</v-btn></td>
+        </tr>
       </tbody>
     
   </v-simple-table>
