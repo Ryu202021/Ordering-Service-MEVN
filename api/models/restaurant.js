@@ -1,18 +1,15 @@
-// post.model.js
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Dish = require('../models/dish');
 
-// Define collection and schema for Restaurant
 let Restaurant = new Schema({
-  name: {
-    type: String
-  },
-  menu: {
-    type: Array
-  }
-},{
-    collection: 'restaurants'
+  name: String,
+  address: String,
+  phoneNumber: String,
+  menu: [{ type: Schema.Types.ObjectId, ref: 'Dish' }],
+  tags: [String]
+}, {
+  collection: 'restaurants'
 });
 
 module.exports = mongoose.model('Restaurant', Restaurant);

@@ -1,19 +1,20 @@
-// post.model.js
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Dish = require("../models/dish");
 
-// Define collection and schema for Post
+let DishOrder = new Schema({
+  dish: { type: Schema.Types.ObjectId, ref: 'Dish' },
+  quantity: { type: Number, default: 1 }
+});
+
 let Order = new Schema({
-  Date: {
-    type: Date
-  },
-  Price: {
-    type: Number
-  },
+  _id: mongoose.Schema.Types.ObjectId,
+  delivered: Boolean,
+  dateOrdered: Date,
+  dateDelivered: Date,
+  dishes: [DishOrder]
 }, {
   collection: 'orders'
-}
-);
+});
 
 module.exports = mongoose.model('Order', Order);
