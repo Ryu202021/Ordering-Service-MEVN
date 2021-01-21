@@ -7,6 +7,7 @@ let Restaurant = new Schema({
   address: String,
   phoneNumber: String,
   menu: [{ type: Schema.Types.ObjectId, ref: 'Dish' }],
+  tags: [String]
 }, {
   collection: 'restaurants'
 });

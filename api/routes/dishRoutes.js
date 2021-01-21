@@ -23,9 +23,9 @@ dishRoutes.route('/:tag').get((req, res) => {
         .then(doc => {
             if (!doc) {
                 res.status(404);
-                return;
-            }
-            res.status(200).json(doc); // returns an array of Dish documents
+            } else {
+                res.status(200).json(doc); // returns an array of Dish documents
+            }  
         })
         .catch(err => {
             res.status(500).json({ error: err });
@@ -36,8 +36,11 @@ dishRoutes.route('/:tag').get((req, res) => {
 dishRoutes.route('/add').post((req, res) => {
     let dish = new Dish(req.body);
     dish.save()
-        .then(() => {
-            res.status(200).json({ 'message': 'Dish added successfully' });
+        .then((doc) => {
+            res.status(200).json({ 
+                message: 'Dish added successfully',
+                result: doc
+            });
         })
         .catch(err => {
             res.status(500).json({ error: err });
@@ -51,7 +54,7 @@ dishRoutes.route('/delete/:id').post((req, res) => {
     Dish.findByIdAndDelete(req.params.id).exec()
         .then((doc) => {
             if (doc) {
-                res.status(200).json({ 'message': 'Dish deleted successfully' });
+                res.status(200).json({ message: 'Dish deleted successfully' });
             } else {
                 res.status(404).json({ message: "Invalid ID" });
             }
