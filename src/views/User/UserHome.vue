@@ -58,13 +58,14 @@
     <v-slide-group
       
       class="pa-4"
-      
+      multiple
       show-arrows
     >
       <v-slide-item
         v-for="item in cuisines"
         :key="item"
         v-slot="{active, toggle}"
+        
         
       >
         <v-card
@@ -73,6 +74,10 @@
           width="350"
           @click="toggle"
         >
+        <router-link
+                    :to="{ name: 'UserDiscover', params: { filter: item.name }}"
+                    class="btn btn-primary"
+                    tag="v-img">
         <v-img
         :src="item.src"
         class="white--text align-end"
@@ -80,7 +85,8 @@
               height="200px"
               >
             <v-card-title :class="active ? 'green--text' : 'white--text'" v-text="item.name"></v-card-title>  
-            </v-img>
+            </v-img></router-link
+                  >
           <v-row
             class="fill-height"
             align="center"
@@ -98,6 +104,7 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
+     
 
     
   </v-sheet>
@@ -113,7 +120,7 @@ import UserNav from "@/components/UserNav.vue";
 
 export default {
   data: () => ({
-    model: [],
+    
     cuisines: [
       {
         name: "Fast Food",

@@ -14,17 +14,15 @@
       <thead>
         <tr>
           <th class="text-left">
-            Order #
-          </th>
-          <th class="text-left">
-            Date
+            Restaurant
           </th>
           <th class="text-left">
             Price
           </th>
           <th class="text-left">
-            View
+            Rating
           </th>
+
         </tr>
       </thead>
       <tbody>
@@ -34,11 +32,11 @@
           <td>$200.65</td>
         </tr>
         <tr
-          v-for="order in orders"
-          :key="order.name"
+          v-for="restaurant in restaurants"
+          :key="restaurant.name"
         >
+          <td>{{ restaurant.name }}</td>
           <td>{{ }}</td>
-          <td>{{  }}</td>
         </tr>
       </tbody>
     </template>
@@ -59,7 +57,8 @@ import UserNav from "@/components/UserNav.vue";
 export default {
   data() {
     return {
-      
+      restaurants: [],
+      filter: ""
     }
   },
   name: "Home",
