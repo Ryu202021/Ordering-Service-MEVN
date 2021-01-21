@@ -3,7 +3,7 @@
 <v-container>
     <UserNav />
     <v-card-text class="grey">
-      <h1>Restaurants </h1>
+      <h1>Menu </h1>
     
     
 
@@ -14,13 +14,13 @@
       <thead>
         <tr>
           <th class="text-left">
-            Restaurant
+            Name
+          </th>
+          <th class="text-left">
+            Description
           </th>
           <th class="text-left">
             Price
-          </th>
-          <th class="text-left">
-            Rating
           </th>
 
         </tr>
@@ -32,13 +32,12 @@
           <td>$200.65</td>
         </tr>
         <tr
-          v-for="restaurant in restaurants"
-          :key="restaurant.name"
+          v-for="item in menu"
+          :key="item.id"
         >
-          <td>{{ restaurant.name }}</td>
-          <td><router-link 
-          :to="{ name: 'UserRestaurant', params: { id: restaurant._id } }" 
-          tag="v-btn"><v-btn>Go</v-btn></router-link></td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.description}}</td>
+          <td>{{ item.price }}</td>
         </tr>
       </tbody>
 
@@ -59,7 +58,7 @@ import UserNav from "@/components/UserNav.vue";
 export default {
   data() {
     return {
-      restaurants: [],
+      menu: [],
       filter: ""
     }
   },

@@ -4,11 +4,13 @@ import UserHome from "../views/User/UserHome.vue";
 import Login from "../components/Login.vue";
 import UserOrders from "../views/User/UserOrders.vue";
 import UserDiscover from "../views/User/UserDiscover.vue";
+import UserRestaurant from "../views/User/UserRestaurant.vue";
 import AdminHome from "../views/Admin/AdminHome.vue";
 import AdminUsers from "../views/Admin/AdminUsers.vue";
 import AdminRestaurants from "../views/Admin/AdminRestaurants";
 import AdminEditUsers from "../views/Admin/AdminEditUsers.vue";
 import AdminEditRestaurants from "../views/Admin/AdminEditRestaurants";
+
 
 Vue.use(VueRouter);
 
@@ -32,6 +34,11 @@ const routes = [
     path: "/userDiscover",
     name:"UserDiscover",
     component: UserDiscover
+  },
+  {
+    path: "/userRestaurant/:id",
+    name: "UserRestaurant",
+    compoent: UserRestaurant
   },
   {
     path:"/adminUsers",

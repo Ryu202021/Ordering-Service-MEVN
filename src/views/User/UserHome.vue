@@ -63,10 +63,8 @@
     >
       <v-slide-item
         v-for="item in cuisines"
-        :key="item"
+        :key="item.id"
         v-slot="{active, toggle}"
-        
-        
       >
         <v-card
           class="ma-4"
