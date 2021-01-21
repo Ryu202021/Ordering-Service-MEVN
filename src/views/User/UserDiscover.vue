@@ -3,7 +3,7 @@
 <v-container>
     <UserNav />
     <v-card-text class="grey">
-      <h1>My Orders </h1>
+      <h1>Restaurants </h1>
     
     
 

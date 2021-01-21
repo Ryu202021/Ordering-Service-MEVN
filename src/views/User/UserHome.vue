@@ -2,9 +2,9 @@
 
 <v-container>
     <UserNav />
-    <v-card-text class="location">
+    <v-card-text class="location text-center">
     
-    <div class=" center">
+    <div class="">
       <form >
           <div class="row">
             <div class="d-inline pa-2 white rounded accent-4 column">
@@ -27,13 +27,22 @@
           </div>
       </form>
     </div>
-    
+    <br>
+      <br>
+      <br>
+      <br>
+<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 
-      <br>
-      <br>
-      <br>
-      <br>
 
+
+      
       
     </v-card-text>
     <v-card-text>
@@ -47,23 +56,31 @@
     max-width="1000"
   >
     <v-slide-group
-      v-model="model"
+      
       class="pa-4"
-      active-class="success"
+      
       show-arrows
     >
       <v-slide-item
         v-for="item in cuisines"
         :key="item"
-        v-slot="{ active, toggle }"
+        v-slot="{active, toggle}"
+        
       >
         <v-card
-          :color="active ? undefined : 'grey lighten-1'"
           class="ma-4"
           height="200"
           width="350"
           @click="toggle"
         >
+        <v-img
+        :src="item.src"
+        class="white--text align-end"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="200px"
+              >
+            <v-card-title :class="active ? 'green--text' : 'white--text'" v-text="item.name"></v-card-title>  
+            </v-img>
           <v-row
             class="fill-height"
             align="center"
@@ -81,6 +98,8 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
+
+    
   </v-sheet>
 
       
@@ -93,28 +112,28 @@
 import UserNav from "@/components/UserNav.vue";
 
 export default {
-  name: "Home",
   data: () => ({
-    
+    model: [],
     cuisines: [
       {
         name: "Fast Food",
-        image: "../assets/fastFood.jpg",
+        src: require("../../assets/fastFood.jpg"),
       },
       {
         name: "Chinese",
-        image: "../assets/chinese.jpg",
+        src: require('../../assets/chinese.jpg'),
       },
       {
         name: "Indian",
-        image: "../assets/indian.jpg"
+        src: require("../../assets/indian.jpg")
       },
       {
         name: "Noodles",
-        image: "../assets/noodles.jpg"
+        src: require("../../assets/noodles.jpg")
       }
 
-    ]
+    ],
+    
   }),
   components: {
     UserNav
