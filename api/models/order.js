@@ -9,7 +9,7 @@ let DishOrder = new Schema({
 
 let Order = new Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  delivered: Boolean,
+  delivered: {type: Boolean, default: false},
   dateOrdered: Date,
   dateDelivered: Date,
   dishes: [DishOrder]

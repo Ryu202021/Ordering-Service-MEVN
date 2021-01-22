@@ -43,8 +43,7 @@ orderRoutes.route('/update/:id').post(function (req, res) {
     if (!order)
       res.status(404).send("data is not found");
     else {
-        order.title = req.body.title;
-        order.body = req.body.body;
+        order = res.json;
         order.save().then(() => {
           res.json('Update complete');
       })

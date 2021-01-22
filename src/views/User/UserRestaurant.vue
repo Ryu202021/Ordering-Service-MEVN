@@ -19,6 +19,8 @@
           <th class="text-left">
             Price
           </th>
+          <th>Quantity</th>
+          <th></th>
 
         </tr>
       </thead>
@@ -26,11 +28,13 @@
         
         <tr
           v-for="item in menu"
-          :key="item.id"
+          :key="item._id"
         >
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
+          <td>{{ order }}</td>
+          <td> <v-btn @click="addItem(item._id)">+ Add</v-btn></td>
         </tr>
       </tbody>
 
@@ -53,7 +57,9 @@ export default {
     return {
       restaurant: {},
       menu: [],
-      filter: ""
+      order: {
+        dishes: []
+      },
     }
   },
   components: {
@@ -66,11 +72,21 @@ export default {
         this.axios.get(uri).then((response) => {
           this.restaurant = response.data;
           this.menu = this.restaurant.menu;
-          console.log(this.menu);
-        });
-        
+         
+        });   
     
-    
+    },
+    methods: {
+      addOrder() {
+     
+        let uri = "http://localhost:4000/orders/add";
+        this.axios.post(uri, this.restaurant);
+        this.$router.push({name:"UserOrders"});
+      }
+    },
+    addItem(id) {
+      order.dishes.push(id);
     }
-};
+    }
+;
 </script>
