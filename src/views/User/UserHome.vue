@@ -46,10 +46,12 @@
       
     </v-card-text>
     <v-card-text>
-      <h1>Cuisines</h1>
+      <br>
+   
+      <h1 class="text-center">Cuisines</h1>
 
       <br>
-      <br>
+
       <v-sheet
     class="mx-auto"
     elevation="8"

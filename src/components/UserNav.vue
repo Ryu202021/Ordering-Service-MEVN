@@ -36,18 +36,18 @@
           active-class="white--text"
         >
            <router-link to="/userHome" tag="v-list-item"><v-list-item>
-           <v-icon>mdi-home</v-icon><v-list-item-title>Home</v-list-item-title>
+           <v-icon>mdi-home</v-icon><v-list-item-title>  Home</v-list-item-title>
           </v-list-item></router-link>
 
           <router-link to="/userOrders" tag="v-list-item"><v-list-item>
-            <v-icon>mdi-cart</v-icon><v-list-item-title>Orders</v-list-item-title>
+            <v-icon>mdi-cart</v-icon><v-list-item-title>  Orders</v-list-item-title>
           </v-list-item></router-link>
 
          <router-link to="/userDiscover" tag="v-list-item"> <v-list-item>
-            <v-icon>mdi-compass</v-icon><v-list-item-title>Discover</v-list-item-title>
+            <v-icon>mdi-compass</v-icon><v-list-item-title>  Discover</v-list-item-title>
           </v-list-item></router-link>
         <router-link to="/" tag="v-list-item"><v-list-item>
-            <v-icon>mdi-logout</v-icon><v-list-item-title>Logout</v-list-item-title>
+            <v-icon>mdi-logout</v-icon><v-list-item-title>  Logout</v-list-item-title>
           </v-list-item></router-link>
         
         </v-list-item-group>
@@ -61,6 +61,7 @@
 
 /* eslint-disable */
 export default {
+  name: "UserNav",
    components: {  },
     data: () => ({
        drawer: false,

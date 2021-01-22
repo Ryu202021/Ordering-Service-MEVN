@@ -1,70 +1,124 @@
-[
-    {
-        "name": "McDonald's",
-        "menu": {
-            "breakfast": [
-                {
-                    "name": "Hash Brown",
-                    "image": null,
-                    "price": 5.00
-                },
-                {}
-            ],
-            "lunch": [
-                {}
-            ]
+{
+    "name": "Kosam",
+    "address": "4922 Yonge St, North York, ON M2N 5N5",
+    "phoneNumber": "416-551-2826",
+    "menu": [
+        {
+            "name": "Perilla Seed Samgyetang",
+            
+            "description": "One whole young chicken stufed with ginseng, sticky rice, Korean dates, chestnut, herbs, etc.",
+            "price" : 21.99,
+            
+            "tags": ["chicken", "asian", "korean"]
         },
-        "logo": "./food.jpg"
-    },
-    {
-        "name": "McDonald's",
-        "menu": {
-            "breakfast": [
-                {
-                    "name": "Hash Brown",
-                    "image": null,
-                    "price": 5.00
-                },
-                {}
-            ],
-            "lunch": [
-                {}
-            ]
+        {
+            "name": "Green Tea Samgyetang",
+            "description": "One whole young chicken stufed with ginseng, sticky rice, Korean dates, chestnut, herbs, etc.",
+            "price": 20.99,
+            "tags": ["chicken", "asian", "korean"]
         },
-        "logo": "./food.jpg"
-    },
-    {
-        "name": "McDonald's",
-        "menu": {
-            "breakfast": [
-                {
-                    "name": "Hash Brown",
-                    "image": null,
-                    "price": 5.00
-                },
-                {}
-            ],
-            "lunch": [
-                {}
-            ]
+        {
+            "name": "Seafood Samgyetang",
+            "description": "One whole young chicken stufed with ginseng, sticky rice, Korean dates, shrimp, sea cucumbers, and a mussel",
+            "price": 25.99,
+            "tags": ["chicken", "asian", "korean", "seafood", "shrimp", "sea cucumber", "mussel"]
         },
-        "logo": "./food.jpg"
-    },
-    {
-        "name": "Wendy's",
-        "menu": {
-            "breakfast": [
-                {
-                    "name": "Hash Brown",
-                    "image": null,
-                    "price": 5.00
-                },
-                {}
-            ],
-            "lunch": [
-                {}
-            ]
+        {
+            "name": "Whole Abalone Samgyetang",
+            "description": "One whole young chicken stufed with ginseng, sticky rice, Korean dates, and an abalone.",
+            "price": 30.99,
+            "tags": ["chicken", "asian", "korean", "seafood", "abalone"]
         },
-        "logo": "./food.jpg"
-    }
-]
+        {
+            "name": "Organic Pine Mushrooms Samgyetang",
+            "description": "One whole young chicken stufed with ginseng, sticky rice, Korean dates, chestnut, and organic pine mushrooms",
+            "price": 27.99,
+            "tags": ["chicken", "asian", "korean"]
+        },
+        {
+            "name": "Mung Bean Pancake",
+            "description": "Korean style pancake made with ground mung beans, kimchi, pork, and vegetables",
+            "price": 12.99,
+            "tags": ["pork", "asian", "korean", "appetizer", "fried", "kimchi"]
+        },
+        {
+            "name": "Korean Short Rib Patties",
+            "description": "Minced short rib made with ingredients such as Korean dates, pine nuts, chestnuts, green onion, etc. with housemade Korean BBQ sauce", 
+            "price": 13.99,
+            "tags": ["pork", "asian", "korean", "BBQ", "barbeque", "appetizer"]
+        },
+        {
+            "name": "Seafood & Green Onion Pancake",
+            "description": "Korean style seafood pancake made with ingredients such as shrimps, oysters, squids, green onions, etc.", 
+            "price": 13.99,
+            "tags": ["seafood", "asian", "korean", "shrimp", "oysters", "squid", "fried", "pancake", "appetizer"]
+        },
+        {
+            "name": "Tonkatsu",
+            "description": "Breaded and Deep-Fried Pork Cutlet", 
+            "price": 13.99,
+            "tags": ["pork", "asian", "korean", "fried", "appetizer"]
+        },
+        {
+            "name": "Tonkatsu with cheese",
+            "description": "Breaded and Deep-Fried Pork Cutlet", 
+            "price": 14.99,
+            "tags": ["pork", "asian", "korean", "fried", "cheese", "appetizer"]
+        },
+        {
+            "name": "Tonkatsu with spinach and cheese",
+            "description": "Breaded and Deep-Fried Pork Cutlet", 
+            "price": 16.99,
+            "tags": ["pork", "asian", "korean", "fried", "cheese", "appetizer"]
+        },
+        {
+            "name": "Spicy Rice Cake",
+            "description": "Rice cake (100% rice) marinated in spicy and sweet Korean red pepper paste",
+            "price": 12.99,
+            "tags": ["cake", "sweet", "appetizer", "rice"]
+        },
+        {
+            "name": "White Rice",
+            "description": "",
+            "price": 2,
+            "tags": ["rice"]
+        },
+        {
+            "name": "Brown Rice",
+            "description": "",
+            "price": 2.5,
+            "tags": ["rice"]
+        },
+        {
+            "name": "Koryo Bibimbap",
+            "description": "Assorted vegetables with ground beef on the rice",
+            "price": 13.99,
+            "tags": ["rice", "Bibimbap", "beef", "korean", "asian", "hot"]
+        },
+        {
+            "name": "Nah-Mul Bibimbap",
+            "description": "Assorted vegetables on the rice",
+            "price": 13.99,
+            "tags": ["rice", "Bibimbap", "vegetarian", "korean", "asian", "hot"]
+        },
+        {
+            "name": "Koryo Bibimbap in a Hot-Stoned Bowl",
+            "description": "Koryo bibimbap in a hot-stoned bowl",
+            "price": 14.99,
+            "tags": ["rice", "Bibimbap", "beef", "korean", "asian", "hot"]
+        },
+        {
+            "name": "Hot Stone Raw Veal Bibimbap",
+            "description": "Koryo bibimbap with raw veal marinated in Korean pepper paste on the rice in a hot-stoned bowl",
+            "price": 16.99,
+            "tags": ["rice", "Bibimbap", "beef", "korean", "asian", "hot"]
+        },
+        {
+            "name": "Hot Stone Organic Mushroom Bibimbap",
+            "description": "Assorted vegetables with organic mushrooms and ground beef on the rice in a hot-stoned bowl",
+            "price": 16.99,
+            "tags": ["rice", "Bibimbap", "beef", "korean", "asian", "hot", "mushrooms", "organic"]
+        }
+    ],
+    "tags": ["korean", "fried", "pork", "beef", "rice", "asian", "hot", "noodles", "soup"]
+}
