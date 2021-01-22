@@ -33,7 +33,7 @@
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
-          <td>{{ order }}</td>
+          <td>{{ order.dishes.select((dish) => { dish._id === item._id ? dish.quantity = 0 : console.log(dish)}) }}</td>
           <td> <v-btn @click="addItem(item._id)">+ Add</v-btn></td>
         </tr>
       </tbody>
@@ -85,7 +85,8 @@ export default {
       }
     },
     addItem(id) {
-      order.dishes.push(id);
+      this.order.dishes.push(id);
+      order.dishes.select((dish) => { dish._id === item._id ? dish.quantity++ : console.log(0)})
     }
     }
 ;
