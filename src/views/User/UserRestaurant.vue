@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       restaurant: {},
-      menu: this.restaurant.menu,
+      menu: [],
       filter: ""
     }
   },
@@ -61,6 +61,15 @@ export default {
   },
   created() {
       // get restaurant from database by ID
+      
+        let uri = `http://localhost:4000/restaurants/${this.$route.params.id}`;
+        this.axios.get(uri).then((response) => {
+          this.restaurant = response.data;
+          this.menu = this.restaurant.menu;
+        });
+        
+    
+    
     }
 };
 </script>
