@@ -64,7 +64,7 @@ export default {
     }
   },
   created() {
-    let uri = "http://localhost:6000/restaurants";
+    let uri = "http://localhost:6000/restaurants/restaurants";
     this.axios.get(uri).then((response) => {
       this.restaurants = response.data;
     });
