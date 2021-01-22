@@ -9,7 +9,8 @@ import AdminHome from "../views/Admin/AdminHome.vue";
 import AdminUsers from "../views/Admin/AdminUsers.vue";
 import AdminRestaurants from "../views/Admin/AdminRestaurants";
 import AdminEditUsers from "../views/Admin/AdminEditUsers.vue";
-import AdminEditRestaurants from "../views/Admin/AdminEditRestaurants";
+import AdminEditRestaurants from "../views/Admin/AdminEditRestaurants.vue";
+import AdminNewRestaurant from "../views/Admin/NewRestaurant.vue";
 
 
 Vue.use(VueRouter);
@@ -49,6 +50,11 @@ const routes = [
     path:"/adminRestaurants",
     name:"AdminRestaurants",
     component: AdminRestaurants
+  },
+  {
+    path: "/adminNewRestaurant",
+    name: "NewRestaurant",
+    component: AdminNewRestaurant
   },
   {
     path:"/editRestaurants:id",

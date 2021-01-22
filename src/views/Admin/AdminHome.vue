@@ -45,11 +45,14 @@ import AdminNav from "@/components/AdminNav.vue";
 export default {
   
   data() {
-      
+      return {
+        restaurants: []
+      }
   },
   components: {
     AdminNav
   },
+  
      
 
 };

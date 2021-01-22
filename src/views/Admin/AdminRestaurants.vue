@@ -30,7 +30,12 @@
         <tr>
           <td></td>
           <td></td>
-          <td><v-btn>+ Add</v-btn></td>
+          <td>
+           <router-link to="/adminNewRestaurant" tag="v-btn"> <v-btn
+          color="error"
+          text
+          large
+          >+ Add</v-btn></router-link></td>
         </tr>
       </tbody>
     
@@ -49,31 +54,17 @@ export default {
 
   data() {
     return {
-        restaurants: [
-          {
-            name: 'Frozen Yogurt',
-            calories: 159,
-          },
-          {
-            name: 'Ice cream sandwich',
-            calories: 237,
-          },
-          {
-            name: 'Eclair',
-            calories: 262,
-          },
-          
-          
-          {
-            name: 'KitKat',
-            calories: 518,
-          },
-        ],
-      }
-  },
+        restaurants: []
+  }},
   components: {
     AdminNav
+  },
+  created() {
+    let uri = "http://localhost:6000/restaurants/restaurants";
+    this.axios.get(uri).then((response) => {
+      this.restaurants = response.data;
+    });
   }
-
+  
 };
 </script>

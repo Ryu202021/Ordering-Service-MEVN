@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 const Dish = require('../models/dish');
 
 let Restaurant = new Schema({
-  name: String,
-  address: String,
-  phoneNumber: String,
-  menu: [{ type: Schema.Types.ObjectId, ref: 'Dish' }],
-  tags: [String]
+  name: {type: String},
+  address: {type: String, default: "85 Moatfield Drive"},
+  phoneNumber: {type: String, default: "XXX-XXX-XXXX"},
+  menu: [{ type: Schema.Types.ObjectId, ref: 'Dish', default: null }],
+  tags: {type: [String], default: ["food"]}
 }, {
   collection: 'restaurants'
 });
