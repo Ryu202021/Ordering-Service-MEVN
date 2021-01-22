@@ -109,7 +109,7 @@ restaurantRoutes.route('/restaurants').get(function (req, res) {
 
 // get restaurant by id
 restaurantRoutes.route('/:id').get((req, res) => {
-  Restaurant.findById(req.params.id).exec()
+  Restaurant.findById(req.params.id).populate('menu').exec()
     .then(doc => {
       if (doc) {
         res.status(200).json(doc);

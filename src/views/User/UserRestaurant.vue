@@ -66,6 +66,7 @@ export default {
         this.axios.get(uri).then((response) => {
           this.restaurant = response.data;
           this.menu = this.restaurant.menu;
+          console.log(this.menu);
         });
         
     
