@@ -9,12 +9,14 @@ let DishOrder = new Schema({
 
 let Order = new Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  delivered: {type: Boolean, default: false},
-  dateOrdered: Date,
-  dateDelivered: Date,
-  dishes: [DishOrder]
+  delivered: { type: Boolean, default: false },
+  dateOrdered: { type: Date, default: Date.now() },
+  dishes: { type: [DishOrder], default: [] }
 }, {
   collection: 'orders'
 });
 
-module.exports = mongoose.model('Order', Order);
+module.exports = {
+  Order: mongoose.model('Order', Order),
+  DishOrder: mongoose.model('DishOrder', DishOrder)
+};
