@@ -4,10 +4,14 @@ let Order = require('../models/order');
 
 // Defined store route
 orderRoutes.route('/add').post(function (req, res) {
-  let order = new Order(req.body);
+  console.log(req.body.dishes);
+  let order = new Order();
+  order.dishes = req.body.dishes;
+  order.dateOrdered = new Date();
+  console.log("order: " + order);
   order.save()
     .then(() => {
-      res.status(200).json({'business': 'business in added successfully'});
+      res.status(200).json({'order': 'order in added successfully'});
     })
     .catch(() => {
       res.status(400).send("unable to save to database");
@@ -15,7 +19,7 @@ orderRoutes.route('/add').post(function (req, res) {
 });
 
 // Defined get data(index or listing) route
-orderRoutes.route('/orders').get(function (req, res) {
+orderRoutes.route('/').get(function (req, res) {
     Order.find(function(err, orders){
     if(err){
       res.json(err);

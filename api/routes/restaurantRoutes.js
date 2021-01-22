@@ -94,7 +94,7 @@ restaurantRoutes.route('/:id/dishes').get((req, res) => {
 // get restaurant dishes by tags
 
 // get all restaurants
-restaurantRoutes.route('/restaurants').get(function (req, res) {
+restaurantRoutes.route('/').get(function (req, res) {
   Restaurant.find().populate('menu')
     .exec((err, restaurants) => {
       if (err) {
