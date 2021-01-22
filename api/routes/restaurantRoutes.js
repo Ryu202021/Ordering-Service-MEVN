@@ -101,7 +101,7 @@ restaurantRoutes.route('/').get(function (req, res) {
         res.json(err);
       }
       else {
-        console.log(restaurants);
+       
         res.json(restaurants);
       }
     });
