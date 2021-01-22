@@ -28,17 +28,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0001</td>
-          <td>Jan. 12, 2021</td>
-          <td>$200.65</td>
-        </tr>
+        
         <tr
           v-for="order in orders"
-          :key="order.name"
+          :key="order._id"
         >
-          <td>{{ }}</td>
-          <td>{{  }}</td>
+          <td>{{ order._id }}</td>
+          <td>{{ order.dateOrdered }}</td>
+          <td>{{ calculate(order.dishes) }}</td>
         </tr>
       </tbody>
     </template>
@@ -63,10 +60,22 @@ export default {
       orders: []
     }
   },
-  name: "Home",
+  created() {
+    let uri = "http://localhost:4000/orders/orders";
+    this.axios.get(uri).then((response) => {
+      this.orders = response.data;
+    });
+  },
   components: {
     UserNav
   },
+  methods: {
+    calculate(dishes) {
+      let total = 0;
+      dishes.forEach(dish => total += (dish.price * dish.quantity));
+      return total;
+    }
+  }
   
 };
 </script>

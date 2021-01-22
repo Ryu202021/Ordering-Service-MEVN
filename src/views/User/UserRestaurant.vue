@@ -21,20 +21,22 @@
           </th>
           <th>Quantity</th>
           <th></th>
+          <th></th>
 
         </tr>
       </thead>
       <tbody>
         
         <tr
-          v-for="item in menu"
+          v-for="item in order.dishes"
           :key="item._id"
         >
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
-          <td>{{  }}</td>
-          <td> <v-btn @click="addItem(item._id)">+ Add</v-btn></td>
+          <td>{{ item.quantity }}</td>
+          <td> <v-btn @click="addItem(item)">+ Add</v-btn></td>
+          <td> <v-btn @click="removeItem(item)">- Remove</v-btn></td>
         </tr>
       </tbody>
 
@@ -77,7 +79,7 @@ export default {
           for (let i=0; i<this.menu.length; i++) {
             this.order.dishes[i].quantity = 0;
           }
-          console.log(this.order.dishes);
+      
          
         });   
     
@@ -90,13 +92,20 @@ export default {
         this.$router.push({name:"UserOrders"});
       },
     
-    addItem(id) {
-      let foundDish = this.order.dishes.select(dish => dish._id == id);
-      console.log(foundDish);
-      this.order.dishes.push(id);
-      this.order.dishes.select((dish) => { dish._id === id ? dish.quantity++ : console.log(0)})
+    addItem(item) {
+     item.quantity++;
+     this.$forceUpdate();
+  
+    },
+    removeItem(item) {
+      if (item.quantity > 0) {
+        item.quantity--;
+      }
+      
+      this.$forceUpdate();
     }
-    }
+    },
+    
 }
 ;
 </script>
