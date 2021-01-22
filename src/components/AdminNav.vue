@@ -74,10 +74,5 @@ export default {
 };
 </script>
 <style>
-body {
-  background: black;
-}
-.location {
-    background-image: url('../assets/food.jpg')
-}
+
 </style>

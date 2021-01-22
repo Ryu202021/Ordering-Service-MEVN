@@ -150,6 +150,7 @@ export default {
         navigator.geolocation.getCurrentPosition(position => {
        console.log(position.coords.latitude);
        console.log(position.coords.longitude);
+       alert("Your latitude is: " + position.coords.latitude + "\n" + "Your longitude is: " + position.coords.longitude)
      },
      error => {
        console.log(error.message);
