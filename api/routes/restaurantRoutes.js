@@ -95,14 +95,16 @@ restaurantRoutes.route('/:id/dishes').get((req, res) => {
 
 // get all restaurants
 restaurantRoutes.route('/restaurants').get(function (req, res) {
-  Restaurant.find((err, restaurants) => {
-    if (err) {
-      res.json(err);
-    }
-    else {
-      res.json(restaurants);
-    }
-  });
+  Restaurant.find().populate('menu')
+    .exec((err, restaurants) => {
+      if (err) {
+        res.json(err);
+      }
+      else {
+        console.log(restaurants);
+        res.json(restaurants);
+      }
+    });
 });
 
 // get restaurant by id

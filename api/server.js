@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = 6000;
+const PORT = 4000; // don't change port, 6000 is considered unsafe by chrome and is blocked
 const cors = require('cors');
 const mongoose = require('mongoose');
 //const config = require('./DB.js');

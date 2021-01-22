@@ -11,6 +11,7 @@ import AdminRestaurants from "../views/Admin/AdminRestaurants";
 import AdminEditUsers from "../views/Admin/AdminEditUsers.vue";
 import AdminEditRestaurants from "../views/Admin/AdminEditRestaurants.vue";
 import AdminNewRestaurant from "../views/Admin/NewRestaurant.vue";
+import AdminDishes from "../views/Admin/AdminDishes.vue";
 
 
 Vue.use(VueRouter);
@@ -33,7 +34,7 @@ const routes = [
   },
   {
     path: "/userDiscover",
-    name:"UserDiscover",
+    name: "UserDiscover",
     component: UserDiscover
   },
   {
@@ -42,13 +43,13 @@ const routes = [
     compoent: UserRestaurant
   },
   {
-    path:"/adminUsers",
-    name:"AdminUsers",
+    path: "/adminUsers",
+    name: "AdminUsers",
     component: AdminUsers
   },
   {
-    path:"/adminRestaurants",
-    name:"AdminRestaurants",
+    path: "/adminRestaurants",
+    name: "AdminRestaurants",
     component: AdminRestaurants
   },
   {
@@ -57,13 +58,18 @@ const routes = [
     component: AdminNewRestaurant
   },
   {
-    path:"/editRestaurants:id",
-    name:"EditRestaurants",
+    path: "/editRestaurants:id",
+    name: "EditRestaurants",
     component: AdminEditRestaurants
   },
   {
-    path:"/editUser:id",
-    name:"EditUser",
+    path: "/adminDishes",
+    name: "Dishes",
+    component: AdminDishes
+  },
+  {
+    path: "/editUser:id",
+    name: "EditUser",
     component: AdminEditUsers
   },
   {

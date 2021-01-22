@@ -9,6 +9,11 @@ Vue.use(VueRouter);
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.config.productionTip = false;
 
+import VueAxios from 'vue-axios';
+import axios from 'axios';
+
+Vue.use(VueAxios, axios);
+
 new Vue({
   router,
   vuetify,

@@ -1,41 +1,35 @@
 <template>
-
-<v-container>
+  <v-container>
     <AdminNav />
     <v-card-text>
-     <v-row class="text-center">
-      <v-col>
-        <router-link to="/adminUsers" tag="v-btn">
-        <v-btn
-        color="error"
-        elevation="4"
-        large
-        text
-        dark
-        outlined
-        >Users</v-btn></router-link>
-      </v-col>
-      <v-col>
-        <v-btn
-        color="error"
-        elevation="4"
-        large
-        text
->Employees</v-btn>
-      </v-col>
-      <v-col>
-        <router-link to="/adminRestaurants" tag="v-btn"><v-btn
-        color="error"
-        elevation="4"
-        large
-        text
->Restaurants</v-btn></router-link>
-      </v-col>
-    </v-row>
-          
+      <v-row class="text-center">
+        <v-col>
+          <router-link to="/adminUsers" tag="v-btn">
+            <v-btn color="error" elevation="4" large text dark outlined
+              >Users</v-btn
+            ></router-link
+          >
+        </v-col>
+        <v-col>
+          <v-btn color="error" elevation="4" large text>Employees</v-btn>
+        </v-col>
+        <v-col>
+          <router-link to="/adminDishes" tag="v-btn">
+            <v-btn color="error" elevation="4" large text dark
+              >Dishes</v-btn
+            ></router-link
+          >
+        </v-col>
+        <v-col>
+          <router-link to="/adminRestaurants" tag="v-btn"
+            ><v-btn color="error" elevation="4" large text
+              >Restaurants</v-btn
+            ></router-link
+          >
+        </v-col>
+      </v-row>
     </v-card-text>
-    
-</v-container>
+  </v-container>
 </template>
 
 <script>
@@ -43,18 +37,14 @@
 import AdminNav from "@/components/AdminNav.vue";
 
 export default {
-  
   data() {
-      return {
-        restaurants: []
-      }
+    return {
+      restaurants: [],
+    };
   },
   components: {
-    AdminNav
+    AdminNav,
   },
-  
-     
-
 };
 </script>
 

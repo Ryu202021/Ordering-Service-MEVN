@@ -99,7 +99,7 @@ export default {
     addRestaurant() {
       this.$refs.observer.validate();
      
-        let uri = "http://localhost:6000/restaurants/add";
+        let uri = "http://localhost:4000/restaurants/add";
         this.axios.post(uri, this.restaurant);
         this.$router.push({name:"AdminRestaurants"});
       
