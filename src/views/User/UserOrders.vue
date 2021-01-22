@@ -61,7 +61,7 @@ export default {
     }
   },
   created() {
-    let uri = "http://localhost:4000/orders/orders";
+    let uri = "http://localhost:4000/orders/";
     this.axios.get(uri).then((response) => {
       this.orders = response.data;
     });
@@ -73,6 +73,7 @@ export default {
     calculate(dishes) {
       let total = 0;
       dishes.forEach(dish => total += (dish.price * dish.quantity));
+      console.log(total);
       return total;
     }
   }

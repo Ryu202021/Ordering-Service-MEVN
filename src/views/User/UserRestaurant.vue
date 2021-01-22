@@ -30,6 +30,7 @@
         <tr
           v-for="item in order.dishes"
           :key="item._id"
+          
         >
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
@@ -42,8 +43,13 @@
 
   </v-simple-table>
       <br>
-
-      
+    <div class="text-right">
+      <v-btn 
+      color='red'
+      x-large
+      dark
+      @click="addOrder"
+      >Order Now</v-btn></div>
     </v-card-text>
     
  
@@ -86,10 +92,12 @@ export default {
     },
     methods: {
       addOrder() {
-     
         let uri = "http://localhost:4000/orders/add";
-        this.axios.post(uri, this.restaurant);
-        this.$router.push({name:"UserOrders"});
+        this.order.dishes = this.order.dishes.filter(item => item.quantity > 0);
+        console.log(this.order);
+        this.axios.post(uri, this.order);
+        this.$router.push({ name: "UserOrders" });
+        
       },
     
     addItem(item) {

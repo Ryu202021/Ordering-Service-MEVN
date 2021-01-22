@@ -27,15 +27,14 @@
       </thead>
       <tbody>
         <tr>
-          <td>0001</td>
-          <td>Jan. 12, 2021</td>
-          <td>$200.65</td>
+          
         </tr>
         <tr
           v-for="restaurant in restaurants"
           :key="restaurant.name"
         >
           <td>{{ restaurant.name }}</td>
+          <td></td>
           <td><router-link 
           :to="{ name: 'UserRestaurant', params: { id: restaurant._id } }" 
           tag="v-btn"><v-btn>Go</v-btn></router-link></td>
@@ -64,7 +63,7 @@ export default {
     }
   },
   created() {
-    let uri = "http://localhost:4000/restaurants/restaurants";
+    let uri = "http://localhost:4000/restaurants/";
     this.axios.get(uri).then((response) => {
       this.restaurants = response.data;
     });
