@@ -33,7 +33,7 @@
           <td>{{ item.name }}</td>
           <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
-          <td>{{ order.dishes.select((dish) => { dish._id === item._id ? dish.quantity = 0 : console.log(dish)}) }}</td>
+          <td>{{  }}</td>
           <td> <v-btn @click="addItem(item._id)">+ Add</v-btn></td>
         </tr>
       </tbody>
@@ -58,7 +58,7 @@ export default {
       restaurant: {},
       menu: [],
       order: {
-        dishes: []
+        dishes: [ ]
       },
     }
   },
@@ -72,6 +72,12 @@ export default {
         this.axios.get(uri).then((response) => {
           this.restaurant = response.data;
           this.menu = this.restaurant.menu;
+          this.order.dishes = this.menu;
+          
+          for (let i=0; i<this.menu.length; i++) {
+            this.order.dishes[i].quantity = 0;
+          }
+          console.log(this.order.dishes);
          
         });   
     
@@ -82,12 +88,15 @@ export default {
         let uri = "http://localhost:4000/orders/add";
         this.axios.post(uri, this.restaurant);
         this.$router.push({name:"UserOrders"});
-      }
-    },
+      },
+    
     addItem(id) {
+      let foundDish = this.order.dishes.select(dish => dish._id == id);
+      console.log(foundDish);
       this.order.dishes.push(id);
-      order.dishes.select((dish) => { dish._id === item._id ? dish.quantity++ : console.log(0)})
+      this.order.dishes.select((dish) => { dish._id === id ? dish.quantity++ : console.log(0)})
     }
     }
+}
 ;
 </script>
