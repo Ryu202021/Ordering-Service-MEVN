@@ -4,9 +4,6 @@
     <UserNav />
     <v-card-text class="grey">
       <h1>Menu </h1>
-    
-    
-
       <br>
       <br>
       <v-simple-table>
@@ -26,17 +23,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0001</td>
-          <td>Jan. 12, 2021</td>
-          <td>$200.65</td>
-        </tr>
+        
         <tr
           v-for="item in menu"
           :key="item.id"
         >
           <td>{{ item.name }}</td>
-          <td>{{ item.description}}</td>
+          <td>{{ item.description }}</td>
           <td>{{ item.price }}</td>
         </tr>
       </tbody>
@@ -58,13 +51,16 @@ import UserNav from "@/components/UserNav.vue";
 export default {
   data() {
     return {
-      menu: [],
+      restaurant: {},
+      menu: this.restaurant.menu,
       filter: ""
     }
   },
-  name: "Home",
   components: {
     UserNav
-  }
+  },
+  created() {
+      // get restaurant from database by ID
+    }
 };
 </script>

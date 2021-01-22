@@ -15,7 +15,7 @@ orderRoutes.route('/add').post(function (req, res) {
 });
 
 // Defined get data(index or listing) route
-orderRoutes.route('/').get(function (req, res) {
+orderRoutes.route('/orders').get(function (req, res) {
     Order.find(function(err, orders){
     if(err){
       res.json(err);

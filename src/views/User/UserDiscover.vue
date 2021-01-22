@@ -63,7 +63,12 @@ export default {
       filter: ""
     }
   },
-  name: "Home",
+  created() {
+    let uri = "http://localhost:6000/restaurants";
+    this.axios.get(uri).then((response) => {
+      this.restaurants = response.data;
+    });
+  },
   components: {
     UserNav
   }

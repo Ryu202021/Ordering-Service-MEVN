@@ -43,5 +43,13 @@ restaurantRoutes.route('/restaurants').get(function (req, res) {
   });
 });
 // get restaurant by id
-
+restaurantRoutes.route('/restaurant/:id').get(function (req, res) {
+    let id = req.params.id;
+    Restaurant.findById(id, function (err, restaurant) {
+      if (err) {
+        res.json(err);
+      }
+      res.json(restaurant);
+    });
+  });
 module.exports = restaurantRoutes;

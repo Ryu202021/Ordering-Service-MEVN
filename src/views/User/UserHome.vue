@@ -31,7 +31,7 @@
       <br>
       <br>
       <br>
-<br>
+      <br>
       <br>
       <br>
       <br>
@@ -40,10 +40,6 @@
       <br>
       <br>
 
-
-
-      
-      
     </v-card-text>
     <v-card-text>
       <br>
@@ -92,14 +88,7 @@
             align="center"
             justify="center"
           >
-            <v-scale-transition>
-              <v-icon
-                v-if="active"
-                color="white"
-                size="48"
-                v-text="'mdi-close-circle-outline'"
-              ></v-icon>
-            </v-scale-transition>
+            
           </v-row>
         </v-card>
       </v-slide-item>
@@ -140,6 +129,7 @@ export default {
       }
 
     ],
+    restaurant: {}
     
   }),
   components: {
@@ -157,7 +147,8 @@ export default {
      },
   )   
 }
-    }
+    },
+    
       
 
 };
