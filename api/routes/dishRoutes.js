@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require("mongoose");
 const dishRoutes = express.Router();
 let Dish = require('../models/dish');
 
@@ -35,6 +36,7 @@ dishRoutes.route('/:tag').get((req, res) => {
 // add dish
 dishRoutes.route('/add').post((req, res) => {
     let dish = new Dish(req.body);
+    dish._id = new mongoose.Types.ObjectId();
     dish.save()
         .then((doc) => {
             res.status(200).json({ 
@@ -43,6 +45,7 @@ dishRoutes.route('/add').post((req, res) => {
             });
         })
         .catch(err => {
+            console.log(err);
             res.status(500).json({ error: err });
         });
 });
@@ -63,3 +66,5 @@ dishRoutes.route('/delete/:id').post((req, res) => {
             res.status(500).json({ error: err });
         });
 });
+
+module.exports = dishRoutes;

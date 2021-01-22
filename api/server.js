@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 //const config = require('./DB.js');
 const restaurantRoutes = require('./routes/restaurantRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const dishRoutes = require('./routes/dishRoutes');
 
 mongoose.Promise = global.Promise;
 
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/orders', orderRoutes);
 app.use('/restaurants', restaurantRoutes);
+app.use('/dishes', dishRoutes);
 app.listen(PORT, function () {
   console.log('Server is running on Port:', PORT);
 });
